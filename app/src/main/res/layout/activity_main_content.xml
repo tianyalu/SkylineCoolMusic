@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_activity_main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.magicasakura.widgets.TintToolbar
+        android:id="@+id/toolbar"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_background"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetStart="0.0dp"
+        app:layout_scrollFlags="enterAlways|scroll">
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <ImageView
+                android:id="@+id/iv_bar_net"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/iv_bar_music"
+                android:background="@drawable/selector_actionbar_disco"
+                android:clickable="true"/>
+
+            <ImageView
+                android:id="@+id/iv_bar_music"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/selector_actionbar_music"
+                android:clickable="true"/>
+
+            <ImageView
+                android:id="@+id/iv_bar_friends"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/iv_bar_music"
+                android:background="@drawable/selector_actionbar_friends"
+                android:clickable="true"/>
+
+            <ImageView
+                android:id="@+id/iv_bar_search"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:background="@drawable/actionbar_search"/>
+        </RelativeLayout>
+    </com.magicasakura.widgets.TintToolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:text="lakdjsflakdsjaAAAA"/>
+</RelativeLayout>
