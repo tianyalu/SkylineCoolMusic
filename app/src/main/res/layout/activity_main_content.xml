@@ -54,9 +54,16 @@
         </RelativeLayout>
     </com.magicasakura.widgets.TintToolbar>
 
-    <TextView
+    <com.sty.skyline.coolmusic.widget.CustomViewPager
+        android:id="@+id/cvp_main_viewpager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@id/toolbar"
-        android:text="lakdjsflakdsjaAAAA"/>
+        android:layout_above="@id/cvp_main_viewpager"/>
+
+    <FrameLayout
+        android:id="@+id/fl_bottom_container"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="50dp"/>
 </RelativeLayout>
