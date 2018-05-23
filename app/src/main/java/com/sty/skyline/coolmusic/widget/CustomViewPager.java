@@ -44,12 +44,12 @@ public class CustomViewPager extends ViewPager {
                 //记录按下时候的坐标
                 downPoint.x = ev.getX();
                 downPoint.y = ev.getY();
-                if(this.getChildCount() > 1){ //有内容，多余一个时通知其父控件，现在进行的是本控件的操作，不允许拦截
+                if(this.getChildCount() > 1){ //有内容，多于一个时通知其父控件，现在进行的是本控件的操作，不允许拦截
                     getParent().requestDisallowInterceptTouchEvent(true);
                 }
                 break;
             case MotionEvent.ACTION_MOVE:
-                if(this.getChildCount() > 1){ //有内容，多余一个时通知其父控件，现在进行的是本控件的操作，不允许拦截
+                if(this.getChildCount() > 1){ //有内容，多于一个时通知其父控件，现在进行的是本控件的操作，不允许拦截
                     getParent().requestDisallowInterceptTouchEvent(true);
                 }
                 break;

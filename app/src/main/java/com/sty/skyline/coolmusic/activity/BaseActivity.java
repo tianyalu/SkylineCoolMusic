@@ -51,4 +51,20 @@ public class BaseActivity extends AppCompatActivity implements ServiceConnection
             }
         }
     }
+
+    public void setMusicStateListenerListener(final  MusicStateListener status){
+        if(status == this){
+            throw new UnsupportedOperationException("Override the method, don't add a listener");
+        }
+
+        if(status != null){
+            mMusticListener.add(status);
+        }
+    }
+
+    public void removeMusicStateListenerListener(final MusicStateListener status){
+        if(status != null){
+            mMusticListener.remove(status);
+        }
+    }
 }
