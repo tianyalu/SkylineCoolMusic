@@ -1,4 +1,4 @@
-package com.sty.skyline.coolmusic.activity;
+package com.sty.skyline.coolmusic.ui.activity;
 
 /**
  * Created by Shi Tianyi on 2018/5/7/0007.

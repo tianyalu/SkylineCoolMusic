@@ -1,4 +1,4 @@
-package com.sty.skyline.coolmusic.activity;
+package com.sty.skyline.coolmusic.ui.activity;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;

@@ -22,7 +22,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyTheme">
-        <activity android:name=".activity.SplashActivity"
+        <activity android:name=".ui.activity.SplashActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout"
             android:theme="@style/customBackground">
@@ -32,7 +32,7 @@
             </intent-filter>
         </activity>
         <!-- intent-filter 标签中不能为空，即不能只注释掉该标签内的内容，需要连该标签一起注释 -->
-        <activity android:name=".activity.MainActivity"
+        <activity android:name=".ui.activity.MainActivity"
             android:screenOrientation="portrait">
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN" />-->

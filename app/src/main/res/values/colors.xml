@@ -10,7 +10,12 @@
     <!-- notification text -->
     <color name="background_material_light_1">#FAFAFA</color>
     <color name="background_material_light_2">#ED02FAFA</color>
+    <color name="small_font">#FF757575</color>
+    <color name="text_color">#FF000000</color>
 
     <!-- Menu Item Color -->
     <color name="themeColorPrimary">#D20000</color>
+
+
+    <color name="theme_color_common_section">#FFE6E8E9</color>
 </resources>
