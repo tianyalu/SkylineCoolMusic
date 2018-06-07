@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.sty.skyline.coolmusic.R;
+import com.sty.skyline.coolmusic.utils.ThemeHelper;
 
 /**
  * Created by Steven.S on 2018/6/6/0006.

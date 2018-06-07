@@ -1,4 +1,4 @@
-package com.sty.skyline.coolmusic.fragment;
+package com.sty.skyline.coolmusic.ui.fragment;
 
 
 import android.app.Activity;

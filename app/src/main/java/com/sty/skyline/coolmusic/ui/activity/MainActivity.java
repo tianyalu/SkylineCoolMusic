@@ -17,12 +17,13 @@ import android.widget.Toast;
 
 import com.sty.skyline.coolmusic.R;
 import com.sty.skyline.coolmusic.ui.adapter.MenuItemAdapter;
+import com.sty.skyline.coolmusic.ui.dialog.CardPickerDialog;
 import com.sty.skyline.coolmusic.utils.LogUtils;
 import com.sty.skyline.coolmusic.widget.LvMenuItem;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements CardPickerDialog.ClickListener{
     private static final String TAG = MainActivity.class.getSimpleName();
     private ActionBar actionBar;
     private ImageView ivBarNet, ivBarMusic, ivBarFriends, ivBarSearch;
@@ -83,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
                         //drawerLayout.closeDrawers();
                         break;
                     case 2: //主题换肤
+                        CardPickerDialog dialog = new CardPickerDialog();
+                        dialog.setClickListener(MainActivity.this);
                         LogUtils.i(TAG, "Item 2 is clicked.");
                         //drawerLayout.closeDrawers();
                         break;
@@ -123,5 +126,10 @@ public class MainActivity extends AppCompatActivity {
         }else {
             return super.onKeyDown(keyCode, event);
         }
+    }
+
+    @Override
+    public void onConfirm(int currentTheme) {
+
     }
 }

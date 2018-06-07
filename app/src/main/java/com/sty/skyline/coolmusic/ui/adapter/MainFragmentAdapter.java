@@ -1,4 +1,4 @@
-package com.sty.skyline.coolmusic.adapter;
+package com.sty.skyline.coolmusic.ui.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -6,7 +6,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.facebook.drawee.view.SimpleDraweeView;
 import com.magicasakura.widgets.TintImageView;
 import com.sty.skyline.coolmusic.R;
 
