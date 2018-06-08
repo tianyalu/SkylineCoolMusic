@@ -6,14 +6,15 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 
-import com.sty.skyline.coolmusic.activity.BaseActivity;
-import com.sty.skyline.coolmusic.activity.MusicStateListener;
+import com.sty.skyline.coolmusic.ui.activity.BaseActivity;
+import com.sty.skyline.coolmusic.ui.activity.MusicStateListener;
+
 
 /**
  * Created by Shi Tianyi on 2018/5/23/0023.
  */
 
-public class BaseFragment extends Fragment implements MusicStateListener{
+public class BaseFragment extends Fragment implements MusicStateListener {
     public Activity mContext;
 
     @Override
