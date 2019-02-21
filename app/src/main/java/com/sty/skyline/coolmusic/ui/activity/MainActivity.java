@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements CardPickerDialog.
     private DrawerLayout drawerLayout;
     private ListView mLvLeftMenu;
     private long time = 0;
-    //private SplahScreen splahScreen;
+    //private SplashScreen splashScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
