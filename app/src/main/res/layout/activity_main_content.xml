@@ -57,9 +57,9 @@
     <com.sty.skyline.coolmusic.widget.CustomViewPager
         android:id="@+id/cvp_main_viewpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/toolbar"
-        android:layout_above="@id/cvp_main_viewpager"/>
+        android:layout_above="@id/fl_bottom_container"/>
 
     <FrameLayout
         android:id="@+id/fl_bottom_container"

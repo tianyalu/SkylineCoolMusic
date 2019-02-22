@@ -23,7 +23,7 @@ public class BaseActivity extends AppCompatActivity implements ServiceConnection
     private MusicPlayer.ServiceToken mToken;
     private PlaybackStatus mPlaybackStatus; //receiver接受播放状态变化等 todo
     //private QuickControlsFragment fragment; //底部播放控制栏 //todo
-    private ArrayList<MusicStateListener> mMusticListener = new ArrayList<>();
+    private ArrayList<MusicStateListener> mMusicListener = new ArrayList<>();
 
     @Override
     public void onServiceConnected(ComponentName name, IBinder service) {
@@ -58,13 +58,13 @@ public class BaseActivity extends AppCompatActivity implements ServiceConnection
         }
 
         if(status != null){
-            mMusticListener.add(status);
+            mMusicListener.add(status);
         }
     }
 
     public void removeMusicStateListenerListener(final MusicStateListener status){
         if(status != null){
-            mMusticListener.remove(status);
+            mMusicListener.remove(status);
         }
     }
 }
