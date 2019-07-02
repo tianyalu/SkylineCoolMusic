@@ -1,11 +1,14 @@
 package com.sty.skyline.coolmusic.ui.fragment;
 
+import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -21,6 +24,7 @@ import com.sty.skyline.coolmusic.model.MainFragmentItem;
 import com.sty.skyline.coolmusic.model.info.PlayList;
 import com.sty.skyline.coolmusic.provider.PlayListInfo;
 import com.sty.skyline.coolmusic.ui.adapter.MainFragmentAdapter;
+import com.sty.skyline.coolmusic.utils.CommonUtils;
 import com.sty.skyline.coolmusic.widget.recyclerview.RecyclerViewDivider;
 
 import java.lang.ref.WeakReference;
@@ -110,14 +114,18 @@ public class MainFragment extends BaseFragment {
     }
 
     //设置音乐overflow条目
-    private static void setMusicInfo() {
-        //todo
-        loadCount(true);
+    private static void setMusicInfo(Context context) {
+        if(CommonUtils.isLollipop() && ContextCompat.checkSelfPermission(context,
+                Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            loadCount(false);
+        }else {
+            loadCount(true);
+        }
     }
 
     private static void loadCount(boolean has) {
         int localMusicCount = 0;
-        int recentMuscCount = 0;
+        int recentMusicCount = 0;
         int downLoadCount = 0;
         int artistsCount = 0;
 
@@ -130,7 +138,7 @@ public class MainFragment extends BaseFragment {
         }
 
         setInfo("本地音乐", localMusicCount, R.drawable.music_icn_local, 0);
-        setInfo("最近播放", recentMuscCount, R.drawable.music_icn_recent, 1);
+        setInfo("最近播放", recentMusicCount, R.drawable.music_icn_recent, 1);
         setInfo("下载管理", downLoadCount, R.drawable.music_icn_dld, 2);
         setInfo("我的歌手", artistsCount, R.drawable.music_icn_artist, 3);
     }
@@ -154,7 +162,7 @@ public class MainFragment extends BaseFragment {
         @Override
         protected Void doInBackground(Void... voids) {
             ArrayList results = new ArrayList();
-            setMusicInfo();
+            setMusicInfo(weakActivity.get());
             ArrayList<PlayList> playLists = playListInfo.getPlayList();  //todo
             ArrayList<PlayList> netPlayLists = playListInfo.getNetPlayList(); //todo
             results.addAll(mList);
